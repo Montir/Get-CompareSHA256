@@ -75,7 +75,7 @@ function ShowComparisonForm {
     $okButton.Top = 130
     $okButton.Left = 150
     $okButton.Add_Click({
-        if ($calculatedHash -eq $textBoxInput.Text) {
+        if ($calculatedHash -eq $textBoxInput.Text.ToUpper().trim()) {
             $labelResult.Text = "Result: Hashes Match!"
         } else {
             $labelResult.Text = "Result: Hashes Do Not Match!"
